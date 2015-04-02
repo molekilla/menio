@@ -1,0 +1,33 @@
+{
+  "author": "Rogelio Morrell <molekilla@gmail.com>",
+  "name": "menio",
+  "description": "production-quality template convention to scrap web sites based on cheerio",
+  "keywords": [
+    "scraper",
+    "templates",
+    "parser"
+  ],
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/molekilla/menio.git"
+  },
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "dependencies": {
+    "underscore": "1.7.0",
+    "cheerio": "0.19.0"
+  },
+  "devDependencies": {
+    "heredoc": "*",
+    "jasmine-node": "*",
+    "grunt-jasmine-node": "*",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-jasmine": "~0.4.2"
+  },
+  "scripts": {
+    "test": "grunt spec"
+  }
+}
