@@ -97,7 +97,7 @@ module.exports = {
         menio.parse(html, 'loteria', function (err, $scope) {
             // callback returns error, scope and model
             var data = _.map(_.rest($scope, 3), function (row) {
-                // sync returns results right awat
+                // sync returns results right away
                 return menio.parse(row, 'row');
             });
 
