@@ -3,6 +3,11 @@ menio
 
 production-quality template convention to scrap web sites based on cheerio
 
+## Installation
+
+```bash
+$ npm install menio
+```
 
 ## A Menio template
 ```javascript
