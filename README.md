@@ -13,13 +13,16 @@ $ npm install menio
 ```javascript
 module.exports = {
     // Selector
-    context: 'table > tr',
+    context: {
+        selector: 'table > tr',
+        index: 4
+    },
     // Properties
     props: {
-        // property receives scope, cheerio and underscore
-        render: function ($scope, $, _) {
-            var numeros = $($scope[4]).find('tr');
-            
+        
+        render: function ($scope) {
+            var numeros = $scope.$find('tr');
+
             // return scope and next = true if this only selects for another template, only available in callback mode
             return {
                 $scope: numeros,
@@ -28,6 +31,7 @@ module.exports = {
         }
     }
 };
+
 ```
 
 ## Another Menio template
@@ -77,6 +81,8 @@ module.exports = {
 
 #### menio.parse(htmlOrDOM, templateName, callback)
 
+#### menio.render(options { template, data }, callback)
+
 #### Callback(err, scope, model)
 
 ### Menio Template Docs
@@ -103,7 +109,7 @@ module.exports = {
             // callback returns error, scope and model
             var data = _.map(_.rest($scope, 3), function (row) {
                 // sync returns results right away
-                return menio.parse(row, 'row');
+                return menio.render({ template: 'row', data: row });
             });
 
 
@@ -132,6 +138,10 @@ module.exports = {
 
     });
 ```
+### Changelog
+
+* 0.2.0: Better API with $scope.$find, context selector index and added render (same as parse) which accepts an options argument
+
 ### License
 
 Copyright 2015 Rogelio Morrell C. MIT License
