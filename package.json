@@ -7,7 +7,7 @@
     "templates",
     "parser"
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/molekilla/menio.git"
@@ -17,7 +17,7 @@
     "node": ">= 0.10"
   },
   "dependencies": {
-    "underscore": "1.7.0",
+    "underscore": "1.8.0",
     "cheerio": "0.19.0"
   },
   "devDependencies": {
